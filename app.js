@@ -55,6 +55,7 @@ app.use("*", (req,res)=> {
     res.status(404).json("The route you requested has not been found");
 });
 
+var port = process.env.port ||3000;
 app.listen(serverPortConfiguration.port,serverPortConfiguration.host,()=> { 
     console.log(`%s Yoloj running on ${serverPortConfiguration.port}`, chalk.green('✓')) 
 });
